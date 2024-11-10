@@ -6,8 +6,30 @@
     <meta name="description" content="Pantalla Principal - Gestión de Instituciones Educativas">
     <title>Pantalla Principal</title>
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
+    
+    @php
+        $adminLinks = [
+            ['route' => 'dashboard', 'icon' => 'bx-home-alt', 'text' => 'Dashboard'],
+            ['route' => 'carreras.create', 'icon' => 'bx-book', 'text' => 'Registrar Carrera'],
+            ['route' => 'maestros.create', 'icon' => 'bx-user', 'text' => 'Registrar Maestros'],
+            // Otros enlaces...
+        ];
+
+        $userLinks = [
+            ['route' => 'user.profile', 'icon' => 'bx-user', 'text' => 'Perfil'],
+            ['route' => 'user.settings', 'icon' => 'bx-cog', 'text' => 'Configuración'],
+            ['route' => 'user.notifications', 'icon' => 'bx-bell', 'text' => 'Notificaciones'],
+            // Otros enlaces específicos para otro tipo de usuario...
+        ];
+    @endphp
+
+    <!-- Si es un sidebar para administrador -->
+    <x-sidebar :links="$adminLinks" />
+
     <div class="container">
         <div class="header">
             <h1>Personaliza tu plantel</h1>

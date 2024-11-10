@@ -2,24 +2,26 @@
 
 namespace App\View\Components;
 
-use Closure;
-use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class Sidebar extends Component
 {
+    public $links;
+
     /**
-     * Create a new component instance.
+     * Crea una nueva instancia del componente.
+     *
+     * @param array $links
      */
-    public function __construct()
+    public function __construct($links = [])
     {
-        //
+        $this->links = $links;
     }
 
     /**
-     * Get the view / contents that represent the component.
+     * Obtiene la vista que representa el componente.
      */
-    public function render(): View|Closure|string
+    public function render()
     {
         return view('components.sidebar');
     }

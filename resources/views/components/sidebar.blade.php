@@ -2,80 +2,47 @@
     <header>
         <div class="image-text">
             <span class="image">
-                <!--<img src="logo.png" alt="">-->
+                <!-- Puedes agregar un logo aquí -->
+                <!--<img src="logo.png" alt="Logo">-->
             </span>
-
             <div class="text logo-text">
-                <span class="name">Codinglab</span>
-                <span class="profession">Web developer</span>
+                <span class="name">Tu Institución</span>
+                <span class="profession">Gestión Académica</span>
             </div>
         </div>
-
         <i class='bx bx-chevron-right toggle'></i>
     </header>
 
     <div class="menu-bar">
         <div class="menu">
-            <li class="search-box">
-                <i class='bx bx-search icon'></i>
-                <input type="text" placeholder="Search...">
-            </li>
-
             <ul class="menu-links">
-                <li class="nav-link">
-                    <a href="#">
-                        <i class='bx bx-home-alt icon'></i>
-                        <span class="text nav-text">Dashboard</span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#">
-                        <i class='bx bx-bar-chart-alt-2 icon'></i>
-                        <span class="text nav-text">Revenue</span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#">
-                        <i class='bx bx-bell icon'></i>
-                        <span class="text nav-text">Notifications</span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#">
-                        <i class='bx bx-pie-chart-alt icon'></i>
-                        <span class="text nav-text">Analytics</span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#">
-                        <i class='bx bx-heart icon'></i>
-                        <span class="text nav-text">Likes</span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#">
-                        <i class='bx bx-wallet icon'></i>
-                        <span class="text nav-text">Wallets</span>
-                    </a>
-                </li>
+                @foreach ($links as $link)
+                    <li class="nav-link">
+                        <a href="{{ route($link['route']) }}">
+                            <i class='bx {{ $link['icon'] }} icon'></i>
+                            <span class="text nav-text">{{ $link['text'] }}</span>
+                        </a>
+                    </li>
+                @endforeach
             </ul>
         </div>
 
         <div class="bottom-content">
-            <li>
-                <a href="#">
-                    <i class='bx bx-log-out icon'></i>
-                    <span class="text nav-text">Logout</span>
-                </a>
+            <li class="nav-link">
+                <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                    @csrf
+                    <button type="submit" class="text nav-text logout-button">
+                        <i class='bx bx-log-out icon'></i>
+                        Cerrar Sesión
+                    </button>
+                </form>
             </li>
-
             <li class="mode">
                 <div class="sun-moon">
                     <i class='bx bx-moon icon moon'></i>
                     <i class='bx bx-sun icon sun'></i>
                 </div>
                 <span class="mode-text text">Dark mode</span>
-
                 <div class="toggle-switch">
                     <span class="switch"></span>
                 </div>
