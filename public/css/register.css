@@ -1,0 +1,244 @@
+/* Configuración básica */
+html {
+    font-size: 62.5%; /* Tamaño base de fuente */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f9fc;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.register-container {
+    background-color: white;
+    display: flex;
+    width: 40%;
+    border-radius: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+/* Contenedor de imagen */
+.register-container_image {
+    background-color: #FA653E; /* Color de fondo */
+    width: 50%; /* Ancho de la imagen en pantallas grandes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.register-container_image img {
+    width: 100%;
+    max-width: 150px;
+}
+
+/* Contenedor de formulario */
+.register-container_form {
+    width: 70%; /* Ancho del formulario en pantallas grandes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+h2 {
+    color: #FA653E;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Campo de entrada */
+label {
+    display: block;
+    margin: 1em 0 0.5em;
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+input[type="text"] {
+    padding: 1rem;
+    width: 90%;
+    color: #2c3e50;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-bottom: 2px solid #FA653E;
+}
+
+
+.form-input {
+    padding: 1rem;
+    width: 90%;
+    color: #2c3e50;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-bottom: 2px solid #FA653E;
+}
+
+
+/* Botón de envío */
+button {
+    background-color: #FA653E;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.3rem;
+    width: 100%;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #F54945;
+}
+
+/* Mensaje de error */
+.error-message {
+    background-color: rgba(245, 73, 69, 0.1);
+    color: #F54945;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Enlace de inicio de sesión */
+.login-link {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.login-link a {
+    color: #FA653E;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Política de privacidad */
+.privacy-policy {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+}
+
+.privacy-policy h3 {
+    font-size: 1.3rem;
+    color: #FA653E;
+    margin-bottom: 0.5rem;
+}
+
+.privacy-policy a {
+    color: #FA653E;
+    text-decoration: none;
+}
+
+.privacy-policy a:hover {
+    text-decoration: underline;
+}
+
+/* Registero de admin */
+.form-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .form-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .register-container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .register-container_image {
+        width: 100%;
+        height: 200px;
+        padding: 2rem;
+    }
+
+    .register-container_form {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    input[type="text"] {
+        width: 90%;
+    }
+
+    button {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    input[type="text"] {
+        padding: 0.8rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Fin de estilos CSS */

@@ -1,0 +1,174 @@
+/* Colores */
+:root {
+    --color-primario: #FA653E;
+    --color-secundario: #FAA545;
+    --color-terciario: #FA8745;
+    --color-cuaternario: #F54945;
+    --color-quinto: #F5BD45;
+    --color-texto: #333;
+    --color-fondo: #FFF9F0;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* Estilos para el encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: var(--color-primario);
+}
+
+.header h2 {
+    font-size: 18px;
+    color: var(--color-secundario);
+}
+
+/* Estilos para el título */
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title h3 {
+    font-size: 28px;
+    color: var(--color-terciario);
+}
+
+/* Estilos para los botones */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--color-primario); /* Color del botón primario */
+}
+
+.btn-secondary {
+    background-color: var(--color-secundario); /* Color del botón secundario */
+}
+
+.btn-success {
+    background-color: var(--color-terciario); /* Color del botón de éxito */
+}
+
+.btn-info {
+    background-color: var(--color-cuaternario); /* Color del botón informativo */
+}
+
+/* Estilos específicos para el botón de cerrar sesión */
+.btn-danger {
+    background-color: var(--color-quinto); /* Color para el botón de cerrar sesión */
+}
+
+.btn-danger:hover {
+    background-color: var(--color-terciario); /* Color en hover */
+    transform: scale(1.05); /* Efecto de escalado */
+}
+
+.btn-carrera {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Estilo del título */
+.title h1 {
+    font-size: 28px;
+    color: var(--color-terciario); /* Color definido en tus variables */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo de la lista de carreras */
+.listado-carreras {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px; /* Ancho máximo para centrar */
+}
+
+/* Contenedor de cada carrera */
+.carrera-item {
+    position: relative;
+    background-color: var(--color-secundario); /* Color de fondo */
+    color: var(--color-texto);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacia el nombre y el botón */
+}
+
+/* Nombre de la carrera */
+.carrera-nombre {
+    flex: 1;
+}
+
+/* Contenedor para mantener los botones en línea */
+.btn-group {
+    display: inline-flex;
+    gap: 5px; /* Espacio entre los botones */
+}
+
+.btn-edit {
+    background-color: #f0ad4e; /* Color amarillo o el que prefieras */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-delete {
+    background-color: #d9534f; /* Color rojo o el que prefieras */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.text-danger {
+    color: #FF0000;
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 15px; /* Aumenta el espacio debajo del mensaje de error */
+}
