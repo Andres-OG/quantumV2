@@ -1,0 +1,94 @@
+/* Definición de los colores */
+:root {
+    --primary-color: #FA653E; /* Color naranja */
+    --secondary-color: #F54945; /* Color rojo */
+    --dark-color: #2c3e50; /* Color de texto oscuro */
+    --light-color: #f7f9fc; /* Fondo claro */
+    --white-color: #ffffff; /* Color blanco */
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* Estilo del contenedor principal */
+.terms-container {
+    background-color: var(--light-color);
+    text-align: left;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+/* Estilo para el título principal */
+.terms-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Estilo para la introducción */
+.terms-intro {
+    font-size: 1.125rem;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Espaciado entre las secciones */
+.terms-content {
+    margin-top: 2rem;
+}
+
+/* Estilo de cada sección */
+.terms-section {
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo para los subtítulos */
+.terms-section-title {
+    font-size: 1.5rem;
+    font-weight: semi-bold;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+/* Estilo del texto de cada sección */
+.terms-text {
+    font-size: 1rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+/* Estilo del pie de la página con el botón */
+.terms-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Estilo del botón */
+.terms-button {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 12px 24px;
+    font-size: 1.125rem;
+    border-radius: 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover sobre el botón */
+.terms-button:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}

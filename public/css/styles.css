@@ -1,0 +1,507 @@
+:root {
+    --primary-color: #FA653E; /* Color azul */
+    --secondary-color: #F54945; /* Color naranja */
+    --dark-color: #2c3e50; /* Color de texto oscuro */
+    --light-color: #f7f9fc; /* Fondo claro */
+    --white-color: #ffffff; /* Color blanco */
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Host Grotesk", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--white-color); /* Fondo claro */
+    padding: 0rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+}
+
+.navbar-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3rem;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Navbar Links */
+.navbar-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navbar-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: var(--primary-color); /* Color de hover azul */
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    content: " ▼";
+    font-size: 0.8rem;
+    color: #333;
+    margin-left: 0.2rem;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    min-width: 150px;
+    z-index: 10;
+}
+
+.dropdown-menu li {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Action Button */
+.navbar-action {
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+    gap: 1rem; /* Espacio entre los botones */
+}
+
+.navbar-action .btn-primary {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color); /* Color de botón naranja */
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: semi-bold;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar-action .btn-primary:hover {
+    background-color: var(--primary-color); /* Hover más oscuro */
+    transform: scale(1.05); /* Efecto de hover */
+}
+
+.btn-secondary {
+    padding: 0.5rem 1rem;
+    background-color: transparent; /* Color de botón azul */
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: semi-bold;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 87, 51, 0.1); /* Hover más oscuro */
+    transform: scale(1.05); /* Efecto de hover */
+}
+
+/* Responsive adjustments */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column; /* Cambia a columna para diseño móvil */
+        align-items: center; /* Centra los elementos del contenedor */
+    }
+
+    .navbar-action {
+        margin-bottom: 10px; 
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        width: 100%;
+    }
+
+    .navbar-links {
+        flex-direction: column; /* Ajusta los enlaces a columna */
+        gap: 0.5rem;
+        align-items: center; /* Centra los enlaces horizontalmente */
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+    }
+}
+
+.navbar-logo {
+    display: flex;
+    max-width: 50px;
+    height: auto;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0rem;
+}
+
+.navbar-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.navbar-logo span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    font-family: "Host Grotesk", sans-serif;
+    line-height: 1;
+}
+
+
+/* ------------------------- Estilos para "Sobre nosotros   ------------------------- */
+.about-section {
+    background-color: var(--light-color); 
+    padding: 4rem 0;
+}
+
+.about-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+
+/* ----------------- Mision e historia ----------------- */
+
+/* Estilo general para la sección de detalles */
+.about-details {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+/* Estilo de cada fila en la sección */
+.about-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.about-row.reverse {
+    flex-direction: row-reverse; /* Invierte la disposición para el segundo bloque */
+}
+
+/* Estilo para las columnas de texto */
+.about-text {
+    flex: 1;
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-color); /* Color de texto oscuro */
+    margin-bottom: 1rem;
+}
+
+.about-text h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: #606770;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para las columnas de imagen */
+.about-image {
+    flex: 1;
+    max-width: 30%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    .about-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-row.reverse {
+        flex-direction: column;
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* ------------------------- Estilos para estadisticas ------------------------- */
+/* Estilo general para la sección */
+.stats-section {
+    background-color: var(--light-color); /* Fondo claro */
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.stats-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 2rem;
+}
+
+/* Estilos para la cuadrícula de tarjetas de estadísticas */
+.stats-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.stats-card {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+}
+
+.stats-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.stats-card h3 {
+    font-size: 1.25rem;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.stats-card a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.stats-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .stats-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* ------------------------- Estilos para el footer ------------------------- */
+/* Footer */
+.site-footer {
+    background-color: var(--white-color);
+    color: var(--dark-color);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.footer-links, .footer-social, .footer-contact {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-links h3, .footer-social h3, .footer-contact h3 {
+    font-size: 1.2rem;
+    color: #ff5722;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a, .footer-social a {
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    color: #ff5722;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    background-color: var(--white-color);
+}
+
+.footer-bottom img {
+    width: 100px;
+    height: auto;
+}
+/* Definición de los colores */
+:root {
+    --primary-color: #FA653E; /* Color naranja */
+    --secondary-color: #F54945; /* Color rojo */
+    --dark-color: #2c3e50; /* Color de texto oscuro */
+    --light-color: #f7f9fc; /* Fondo claro */
+    --white-color: #ffffff; /* Color blanco */
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* Estilo del contenedor principal */
+.terms-container {
+    background-color: var(--light-color);
+    text-align: left;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+/* Estilo para el título principal */
+.terms-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Estilo para la introducción */
+.terms-intro {
+    font-size: 1.125rem;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Espaciado entre las secciones */
+.terms-content {
+    margin-top: 2rem;
+}
+
+/* Estilo de cada sección */
+.terms-section {
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo para los subtítulos */
+.terms-section-title {
+    font-size: 1.5rem;
+    font-weight: semi-bold;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+/* Estilo del texto de cada sección */
+.terms-text {
+    font-size: 1rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+/* Estilo del pie de la página con el botón */
+.terms-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Estilo del botón */
+.terms-button {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 12px 24px;
+    font-size: 1.125rem;
+    border-radius: 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover sobre el botón */
+.terms-button:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
